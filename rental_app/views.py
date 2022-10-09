@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .models import User,Customer,Car,Provider,Feedback
 
-# Create your views here.
+def register_page(request):
+    return render(request,"register.html")
