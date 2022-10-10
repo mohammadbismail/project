@@ -12,17 +12,30 @@
 </head>
 
 <body>
-    <header>
-        <div class="container border">
+        <header>
+            <div class="container-lg border border-1 my-4">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-4 p-3 border">
+                        <h2>PalRen</h2>
+                        <h4>Car Rental in Palestine</h4>
+                    </div>
+                    <div class="col-lg-6 col-sm-4 p-3 border">
+                        <h1>Fast, Easy & Reliable solution</h1>
+                    </div>
+                    <div class="col-lg col-sm-4 p-4 border">
+                        <button>Button1</button>
+                        <button>Button2</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% block content%}
 
-        </div>
-    </header>
-    {% block content%}
-    {% endblock %}
+        {% endblock %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
