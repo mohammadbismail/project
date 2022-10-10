@@ -3,4 +3,9 @@ from .models import Customer, Car, Provider, Feedback
 
 
 def register_page(request):
-    return render(request, "provider_register.html")
+    context = {
+        "all_cars": Car.objects.all(),
+    }
+    return render(request, "customer/search.html", context)
+
+
