@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<main>
+    <div class="container-xl my-5">
+        <div class="row justify-content-center">
+            <!-- row containing register page -->
+            <div class="col-8 ">
+                <div class="py-5 text-center">
+                    <h2>Provider Registration & Login</h2>
+                    <p class="lead">Dear Provider, Kindly fill below information for completion of registration
+                        process
+                    </p>
+                </div>
+                <!-- TODO: start of regiseration-login container column  -->
+                <div class="row justify-content-start">
+                    <!-- TODO: start of login section -->
+                    <div class="col-md-4">
+                        <h2 class="text-center">Login</h2>
+                        <hr class="border border-2 border-primary">
+                        <form action="" method="post" class="needs-validation" novalidate>
+                            {% csrf_token %}
+                            <div class="col my-2">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                            </div>
+                            <div class="col my-2">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                            <div class="my-5 text-center">
+                                <button class="w-20 btn btn-outline-secondary btn-lg" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- TODO: end of login section -->
+                    <div class="col-md-8">
+                        <h2 class="text-center">Register</h2>
+                        <hr class="border border-2 border-primary">
+                        <!-- TODO: start of registeration section -->
+                        <!-- FIXME: add action -->
+                        <form action="" class="needs-validation" novalidate method="post">
+                            {% csrf_token %}
+                            <!-- TODO: first name  & last name inputs  -->
+                            <div class="row g-3">
+                                <div class="col-sm-7">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder=""
+                                        value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <label for="location" class="form-label">Location</label>
+                                    <input type="text" class="form-control" id="location" placeholder="" value=""
+                                        required>
+                                </div>
+                            </div>
+                            <!-- TODO: end of name & location -->
+                            <!-- TODO: start of email-->
+                            <div class="row">
+                                <div class="col-lg">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- TODO: end of email-->
+                            <!-- TODO: start of password-->
+                            <div class="row">
+                                <div class="col">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" name="password" id="password"
+                                        placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid password is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- TODO: end of password-->
+                            <!-- TODO: start of password-->
+                            <div class="row">
+                                <div class="col">
+                                    <label for="confp" class="form-label">Confirm PW</label>
+                                    <input type="password" class="form-control" name="confp" id="confp"
+                                        placeholder="" value="" required>
+                                    <div class="invalid-feedback">
+                                        Valid password is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- TODO: end of password-->
+                            <!-- TODO: start of permit-->
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label for="permit" class="form-label">Permit</label>
+                                    <input type="text" class="form-control" id="permit">
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="mobile" class="form-label">Mobile</label>
+                                    <input type="tel" class="form-control" id="mobile" required>
+                                </div>
+                            </div>
+                            <!-- TODO: End of age and national id -->
+                            <!-- TODO: end of registration section -->
+                            <div class="my-5 text-center">
+                                <button class="w-20 btn btn-outline-secondary btn-lg" type="submit">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- TODO: end of registration section  -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</main>
+
+{% endblock %}
