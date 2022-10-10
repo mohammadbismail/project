@@ -1,0 +1,345 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!--Main Navigation-->
+<header>
+    <style>
+
+        #intro {
+            background-image: url(https://th.bing.com/th/id/R.526043d0c152505436facad612571d85?rik=Ok0ftiMed9vU4A&riu=http%3a%2f%2fwww.hdwallpaperspulse.com%2fwp-content%2fuploads%2f2016%2f03%2f06%2fhd-car-background.jpeg&ehk=fNK%2fAEXVlyVgAhfGUFHxi26zxmu9W3lje7OasGXfCUU%3d&risl=&pid=ImgRaw&r=0);
+            /* background-image: url(https://source.unsplash.com/CRNbHjNaljo/); */
+            height: 100vh;
+        }
+
+        /* Height for devices larger than 576px */
+        @media (min-width: 992px) {
+            #intro {
+                margin-top: -58.59px;
+            }
+        }
+
+        .navbar .nav-link {
+            color: #fff !important;
+        }
+        h1{
+            color: white;
+        }
+        .advanced_selector{
+            display: flex; 
+            justify-content: space-evenly
+        }
+        
+    </style>
+
+    <!-- Navbar -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+        <div class="container-fluid"> -->
+            <!-- Navbar brand -->
+            <!-- <a class="navbar-brand nav-link" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+                <strong>MDB</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+                aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarExample01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" aria-current="page" href="#intro">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
+                            rel="nofollow" target="_blank">Learn Bootstrap 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Download MDB
+                            UI KIT</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav d-flex flex-row"> -->
+                    <!-- Icons -->
+                    <!-- <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
+                            rel="nofollow" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item me-3 me-lg-0">
+                        <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow"
+                            target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <!-- Navbar -->
+
+    <!-- Background image -->
+    <div id="intro" class="bg-image shadow-2-strong">
+        <div class="mask d-flex align-items-center h-100" style="background-color: rgba(20, 19, 19, 0.8);">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-md-8"><br> <br>
+                        <h1>To everywhere, From anywhere</h1>
+                        <form class="bg-white  rounded-5 shadow-5-strong p-5">
+                            <!-- select city -->
+                            <div class="form-outline mb-4">
+                                <p>City:</p>
+                                <select class="form-control" name="select_city"   >
+                                    <option>please select a city</option>
+                                    <option>Ramallah</option>
+                                    <option>Jenin</option>
+                                    <option>Tulkarm</option>
+                                    <option>Jericho</option>
+                                    <option>Nablus</option>
+                                </select>
+                            </div>
+                            <!-- pick up date -->
+                            <div class="form-outline mb-4">
+                                <label class="pick_up_date" >Pick up date</label>
+                                <input type="date" class="form-control"/>
+                            </div>
+
+                            <!-- drop off date -->
+                            <div class="form-outline mb-4">
+                                <label class="drop_off_date">drop off date</label>
+                                <input type="date" class="form-control"/>
+                            </div>
+
+                            <!-- 2 column grid layout for inline styling -->
+                            <div class="row mb-4">
+                                <div class="col d-flex justify-content-center">
+                                    <!-- Checkbox -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            checked />
+                                        <label class="form-check-label">
+                                            My age more than 24 Years
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col text-center">
+                                    <!-- Simple link -->
+                                    <a href="#!">advance search</a>
+                                </div>
+                            </div>
+                            <div class="advanced_selector">
+                                <div class="form-outline mb-4">
+                                    <p>Price Range:</p>
+                                    <select class="form-control" name="select_price">
+                                        <option>please select range</option>
+                                        <option>150 - 200</option>
+                                        <option>250 - 300</option>
+                                        <option>500 - 1000</option>
+                                    </select>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <p>model:</p>
+                                    <select class="form-control" name="select_model" >
+                                        <option>Please select a Model</option>
+                                        <option>Mercedes benz</option>
+                                        <option>BMW</option>
+                                        <option>Audi</option>
+                                        <option>hyundai</option>
+                                        <option>Mazda</option>
+                                    </select>
+                                </div>
+                                <div class="form-outline mb-4">
+                                    <p>Production Year:</p>
+                                    <select class="form-control" name="select_year">
+                                        <option>Please select a Year</option>
+                                        <option>2016 - 2018</option>
+                                        <option>2018 - 2020</option>
+                                        <option>2020 - 2022</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Background image -->
+</header>
+<!--Main Navigation-->
+
+<!--Footer-->
+<!-- <footer class="bg-light text-lg-start">
+    <div class="py-4 text-center">
+        <a role="button" class="btn btn-primary btn-lg m-2"
+            href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow" target="_blank">
+            Learn Bootstrap 5
+        </a>
+        <a role="button" class="btn btn-primary btn-lg m-2" href="https://mdbootstrap.com/docs/standard/"
+            target="_blank">
+            Download MDB UI KIT
+        </a>
+    </div>
+
+    <hr class="m-0" />
+
+    <div class="text-center py-4 align-items-center">
+        <p>Follow MDB on social media</p>
+        <a href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" class="btn btn-primary m-1" role="button"
+            rel="nofollow" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.facebook.com/mdbootstrap" class="btn btn-primary m-1" role="button" rel="nofollow"
+            target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/MDBootstrap" class="btn btn-primary m-1" role="button" rel="nofollow"
+            target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://github.com/mdbootstrap/mdb-ui-kit" class="btn btn-primary m-1" role="button" rel="nofollow"
+            target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    </div> -->
+
+    <!-- Copyright -->
+    <!-- <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div> -->
+    <!-- Copyright -->
+<!-- </footer> -->
+<!--Footer-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <style>
+    * {
+        font-family: cursive;
+    }
+.seach_form{
+    width: 70rem;
+    display: flex;
+    justify-content: space-evenly;
+} 
+input{
+    margin-right: 30px;
+}
+.search_button{
+    width: 10rem;
+    height: 2rem;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px;
+}
+.advance_selector{
+    width: 40rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+</style>
+    <section class="py-5">
+        <div class="container">
+            <h1 class="fw-light">Search For Car</h1>
+            <form  class="seach_form" action="" >
+                <p>
+                    City:
+                    <select name="city_selector">
+                        <option value="">Ramallah</option>
+                        <option value="">Gaza</option>
+                        <option value="">Nablus</option>
+                        <option value="">Jenin</option>
+                        <option value="">Tularm</option>
+                        <option value="">Salfet</option>
+                        <option value="">Qalqeliah</option>
+                        <option value="">Tubas</option>
+                    </select>
+                </p>
+                <div class="searc_date">
+                    <label for="">pick up date:</label>
+                    <input type="date" name="" placeholder="">
+                    <label for="">drop off date:</label>
+                    <input type="date" name="" id="">
+                </div>
+                <input class="search_button" type="submit" value="Search">
+            </form>
+            <a href="">Advanced search</a> <br> <br>
+            <form class="advance_selector" action="">
+                <select>
+                    <option value="">Price Rang</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <select>
+                    <option value="">Model</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <select>
+                    <option value="">Production Year</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </form>
+        </div>
+    </section>  -->
+
+{% endblock %}

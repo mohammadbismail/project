@@ -22,38 +22,16 @@
                     <header class="card-header">
                         <h6 class="title">Brands</h6>
                     </header>
+                    {% for car in all_cars%}
                     <form>
                         <label class="form-check">
                             <input class="form-check-input" type="checkbox" value="">
                             <span class="form-check-label">
-                                Mersedes
-                            </span>
-                        </label> <!-- form-check.// -->
-                        <label class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <span class="form-check-label">
-                                Nissan
-                            </span>
-                        </label> <!-- form-check.// -->
-                        <label class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <span class="form-check-label">
-                                Hundayia
-                            </span>
-                        </label> <!-- form-check.// -->
-                        <label class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <span class="form-check-label">
-                                Obel
-                            </span>
-                        </label> <!-- form-check.// -->
-                        <label class="form-check">
-                            <input class="form-check-input" type="checkbox" value="">
-                            <span class="form-check-label">
-                                Another Brand
+                                {{car.model}}
                             </span>
                         </label> <!-- form-check.// -->
                     </form>
+                    {% endfor %}
                 </article>
                 <article class="card-group-item">
                     <header class="card-header">

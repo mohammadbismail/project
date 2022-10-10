@@ -44,9 +44,7 @@ class Provider(models.Model):
 
 class Car(models.Model):
     customers = models.ManyToManyField(Customer, related_name="cars_booked")
-    provider = models.ForeignKey(
-        Provider, related_name="cars_provided", on_delete=models.CASCADE
-    )
+    provider = models.ForeignKey(Provider, related_name="cars_provided", on_delete=models.CASCADE)
     brand = models.CharField(max_length=45)
     model = models.CharField(max_length=45)
     plate_number = models.CharField(max_length=45)

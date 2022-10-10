@@ -6,6 +6,5 @@ def register_page(request):
     context = {
         "all_cars": Car.objects.all(),
     }
+    print(context["all_cars"])
     return render(request, "customer/search.html", context)
-
-
