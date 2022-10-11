@@ -53,29 +53,32 @@
                     <div class="col-lg-5 p-0 ps-lg-4" id="pay_details">
                         <div class="row m-0">
                             <div class="col-12 px-4">
-                                <div class="d-flex align-items-end mt-4 mb-2">
-                                    <p class="h4 m-0">car name</p>
-                                </div>
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="textmuted">Renting days</p>
-                                    <p class="fs-14 fw-bold">10</p>
-                                </div>
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="textmuted">daily price</p>
-                                    <p class="fs-14 fw-bold"><span class="fas fa-dollar-sign pe-1"></span>1,500</p>
-                                </div>
-                                <div class="d-flex justify-content-between mb-2">
-                                    <p class="textmuted">discount</p>
-                                    <p class="fs-14 fw-bold"><span class="fas fa-dollar-sign pe-1"></span>0%</p>
-                                </div>
-                                <div class="d-flex justify-content-between mb-3">
-                                    <p class="textmuted fw-bold">Total</p>
-                                    <div class="d-flex align-text-top ">
-                                        <span class="fas fa-dollar-sign mt-1 pe-1 fs-14 "></span><span
-                                            class="h4">1,500</span>
+                                <form action="/car_book/" method="post">
+                                    {% csrf_token %}
+                                    <div class="d-flex align-items-end mt-4 mb-2">
+                                        <p class="h4 m-0">car name</p>
                                     </div>
-                                </div>
-                                <button class="btn btn-dark" type="submit">Book Car</button>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <p class="textmuted">Renting days</p>
+                                        <p class="fs-14 fw-bold">10</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <p class="textmuted">daily price</p>
+                                        <p class="fs-14 fw-bold"><span class="fas fa-dollar-sign pe-1"></span>1,500</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <p class="textmuted">discount</p>
+                                        <p class="fs-14 fw-bold"><span class="fas fa-dollar-sign pe-1"></span>0%</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <p class="textmuted fw-bold">Total</p>
+                                        <div class="d-flex align-text-top ">
+                                            <span class="fas fa-dollar-sign mt-1 pe-1 fs-14 "></span><span
+                                                class="h4">1,500</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-dark" type="submit">Book Car</button>
+                                </form>
                             </div>
                         </div>
                     </div>

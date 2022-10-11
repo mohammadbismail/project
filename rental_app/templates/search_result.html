@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    {% load staticfiles %}
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/search.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
-
 <body>
     <main>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-
         <div class="container">
             <div class="card filter_side_bar">
                 <article class="card-group-item">
@@ -84,19 +81,36 @@
                     <p>you have 20 cars to select</p>
                 </div>
                 <!-- TODO: the following divisions are  examples and will be deleted when the loop is on -->
+                <div class="car_box">
+                    <form action="/car_select/" method="post">
+                        {% csrf_token %}
+                        <img class="car_pic" src="{% static 'img/car_pic.jpg' %}" alt="car pic">
+                        <div class="car_details">
+                            <h6>Car name</h6>
+                            <h6>production_year</h6>
+                            <h6>color</h6>
+                            <h6>rating*****</h6>
+                        </div>
+                        <div class="payment_details">
+                            <h6>price150$</h6>
+                            <h6>total_price1500$</h6>
+                        </div>
+                        <button class="btn btn-dark" type="submit">Select Car</button>
+                    </form>
+                </div>
                 {% for car in all_cars%}
                 <div class="car_box">
-                    <img class="car_pic" src="{% static 'img/car_pic.jpg' %}" alt="car pic">
-                    <div class="car_details">
-                        <h6>{{car.brand}}</h6>
-                        <h6>{{car.model}}</h6>
-                        <h6>{{car.production_year}}</h6>
-                    </div>
-                    <div class="payment_details">
-                        <h6>price150$</h6>
-                        <h6>total_price1500$</h6>
-                    </div>
-                    <button class="btn btn-dark" type="submit">Select Car</button>
+                        <img class="car_pic" src="{% static 'img/car_pic.jpg' %}" alt="car pic">
+                        <div class="car_details">
+                            <h6>{{car.brand}}</h6>
+                            <h6>{{car.model}}</h6>
+                            <h6>{{car.production_year}}</h6>
+                        </div>
+                        <div class="payment_details">
+                            <h6>price150$</h6>
+                            <h6>total_price1500$</h6>
+                        </div>
+                        <button class="btn btn-dark" type="submit">Select Car</button>
                 </div>
                 {% endfor %}
                 <!-- TODO: delete till here -->

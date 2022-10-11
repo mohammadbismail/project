@@ -18,15 +18,15 @@
                     <div class="col-md-4">
                         <h2 class="text-center">Login</h2>
                         <hr class="border border-2 border-primary">
-                        <form action="" method="post" class="needs-validation" novalidate>
+                        <form action="/provider_login/" method="post" class="needs-validation" novalidate>
                             {% csrf_token %}
                             <div class="col my-2">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com">
                             </div>
                             <div class="col my-2">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" name="password" id="password">
                             </div>
                             <div class="my-5 text-center">
                                 <button class="w-20 btn btn-outline-secondary btn-lg" type="submit">Login</button>
@@ -39,7 +39,7 @@
                         <hr class="border border-2 border-primary">
                         <!-- TODO: start of registeration section -->
                         <!-- FIXME: add action -->
-                        <form action="" class="needs-validation" novalidate method="post">
+                        <form action="/provider_reg/" class="needs-validation" novalidate method="post">
                             {% csrf_token %}
                             <!-- TODO: first name  & last name inputs  -->
                             <div class="row g-3">
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="col-sm-5">
                                     <label for="location" class="form-label">Location</label>
-                                    <input type="text" class="form-control" id="location" placeholder="" value=""
+                                    <input type="text" class="form-control" name="location" id="location" placeholder="" value=""
                                         required>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                             <div class="row">
                                 <div class="col-lg">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="you@example.com">
                                     <div class="invalid-feedback">
                                         Please enter a valid email address
                                     </div>
@@ -97,11 +97,11 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label for="permit" class="form-label">Permit</label>
-                                    <input type="text" class="form-control" id="permit">
+                                    <input type="text" class="form-control" name="permit" id="permit">
                                 </div>
                                 <div class="col-lg-6">
                                     <label for="mobile" class="form-label">Mobile</label>
-                                    <input type="tel" class="form-control" id="mobile" required>
+                                    <input type="tel" class="form-control" name="mobile" id="mobile" required>
                                 </div>
                             </div>
                             <!-- TODO: End of age and national id -->
